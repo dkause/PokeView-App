@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: yellow;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pokemonlist {
+  margin: 20% auto;
+  width: 60%;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  line-height: 2rem;
+}
+
+/*  Style Big Pokemon Text */
+
+.bigPokemon {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
