@@ -12,21 +12,31 @@ let pokemonRepository = (function () {
   function getAll() {
     return pokemonList;
   }
+  function addlistItem(pokemon) {
+    let ulElement = document.querySelector(".pokemon-list");
+    let listItem = document.createElement("li");
+    listItem.classList.add("pokemon-list-item");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    button.addEventListener('click', function(event) {
+      showDetails(pokemon);
+    });
+    listItem.appendChild(button);
+    ulElement.appendChild(listItem);
+  }
+
+  function showDetails (pokemon) {
+    console.log(pokemon)
+  }
+
   return {
     add: add,
     getAll: getAll,
+    addlistItem: addlistItem,
   };
 })();
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-  if (pokemon.height > 1) {
-    document.write(
-      "<li>" +
-        pokemon.name +
-        "<span class='bigPokemon'> is a big pokemon</span>" +
-        "</li>"
-    );
-  } else {
-    document.write("<li>" + pokemon.name + "</li>");
-  }
+  pokemonRepository.addlistItem(pokemon);
 });
