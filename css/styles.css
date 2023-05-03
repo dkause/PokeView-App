@@ -1,97 +1,177 @@
 :root {
-  --primary-color: rgb(7, 7, 7);
-  --background-color: black;
+  --primary-color: rgb(174, 243, 15);
+  --background-color: rgb(74, 74, 74);
   --secondary-color: rgb(35, 36, 42);
   --yellow: #ffdd40;
   --dark: #2f313a;
-  --deg: -86deg;
-  --trans: all 0.4s ease 0s;
+  --font-family: Genos, sans-serif;
   --font-size: 72px;
 }
+
 body {
-  background-image: linear-gradient(
-    to right,
-    rgba(13, 1, 27, 0.276),
-    rgb(38, 9, 70),
-    rgba(0, 128, 0, 0.118)
-  );
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: var(--background-color);
   color: var(--primary-color);
   font-size: 28px;
-  font-family: "Caveat", cursive;
+  font-family: var(--font-family);
   overflow-x: hidden;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 button {
-  font-size: calc(var(--font-size)*0.3);
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-size: calc(var(--font-size) * 0.3);
   border: none;
-  background-color: transparent;
 }
+
 .headline {
   font-family: "Nabla", cursive;
   font-size: var(--font-size);
 }
 
+.list-wrapper {
+  margin: auto 1em;
+}
+
 ul {
   list-style-type: none;
 }
+
 li {
   line-height: 2rem;
+  align-items: center;
 }
+
 .pokemon-list {
   padding: 0.1em 0 0em 0em;
   margin: 0;
 }
 
-.pokemon-list-item  {
-  /* margin: 0.01em 0 0.5em; */
-  padding: em;
-  background: linear-gradient(
-    83deg,
-    var(--yellow) 0 97%,
-    #fff0 calc(97% + 1px) 100%
-  );
+.pokemon-list-item {
+  margin: 0.25em;
+  padding: 0.2em 1em;
   position: relative;
   list-style: none;
-  /* display: inline-block; */
-  transform: scale(0.85);
-  transition: var(--trans);
+  display: inline-block;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5em;
 }
 
-.pokemon-list-item:nth-of-type(even) {
-  /* text-align: right; */
-  background: linear-gradient(
-    -83deg,
-    var(--yellow) 0 97%,
-    #fff0 calc(97% + 1px) 100%
-  );
+.pokemon-list-item button.button-class:hover {
+  text-decoration: underline;
 }
-.pokemon-list-item:hover {
-  transform: scale(1);
-  transition: var(--trans);
-  filter: drop-shadow(0px 20px 10px #0008);
-}
-
-
 /*  Style Big Pokemon Text */
 
 .bigPokemon {
   color: var(--secondary-color);
 }
+.footer {
+  margin-top: 1em;
+}
+.creator {
+  margin: 0;
+  background-color: light-grey;
+  width: 100%;
+}
 
-@media screen and (max-width: 620px) {
-  .headline {
-    font-size: calc(var(--font-size) * 0.5);
+.author-text {
+  font-size: calc(var(--font-size) * 0.2);
+}
+.small-text {
+  font-size: calc(var(--font-size) * 0.1);
+}
+
+/* Media Queries */
+
+/* Media Query for smaller Screens */
+@media screen and (max-width: 600px) {
+  .pokemon-list {
+    display: flex;
+    flex-wrap: ;
+    flex-direction: column;
+  }
+  h1 {
+     text-align: center;  
+  }
+  .modal .headline {
+    font-size: calc(var(--font-size) * 0.3);
   }
 }
-@media screen and (max-width: 620px) {
+
+/* Media Query for bigger Screens */
+@media screen and (max-width: 922px) {
   .headline {
-    font-size: calc(var(--font-size) * 0.5);
+    font-size: calc(var(--font-size) * 0.7);
   }
+}
+
+/* Modal Container */
+#modal-container {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  /* to show it above other content */
+  z-index: 999;
+
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto;
+
+  /* this is used to center the modal */
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: var(--background-color);
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.modal h1 {
+  text-transform: uppercase;
+}
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+}
+
+.modal h1 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  /* CSS for modal container - add your own desired CSS styles here */
+  display: block;
 }
