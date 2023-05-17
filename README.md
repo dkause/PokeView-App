@@ -4,4 +4,10 @@ A Pokédex application that displays a list and details of Pokémon by loading d
 
 ## Context
 
-This is app is an exercise to learn Front End Development using HTML, CSS and Javascript. 
+This is app is an exercise to learn Front End Development using HTML, CSS and Javascript.
+
+## Things used
+
+- jQuery
+- Bootstrap
+- Visual Studio Code
