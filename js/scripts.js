@@ -1,7 +1,8 @@
+
 let pokemonRepository = (function () {
   // An empty pokemon list
   let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=177";
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=77";
 
   function add(pokemon) {
     pokemonList.push(pokemon);
@@ -12,6 +13,8 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
+  
+// Add Button
   function addlistItem(pokemon) {
     let button = document.createElement("button");
     button.innerText = pokemon.name;
@@ -21,7 +24,10 @@ let pokemonRepository = (function () {
     $(button).attr("data-target", "#exampleModalCenter");
 
     $("#pkm-list-group").append(button);
+    $(button).click(function(event){showDetails(pokemon)});
+    
   }
+ 
 
   function loadList() {
     return fetch(apiUrl)
@@ -53,6 +59,7 @@ let pokemonRepository = (function () {
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
         item.types = details.types;
+        showModal(item);
       })
       .catch(function (e) {
         console.error(e);
@@ -60,11 +67,9 @@ let pokemonRepository = (function () {
   }
 
   function showDetails(pokemon) {
-    pokemonRepository.loadDetails(pokemon).then(function (pokemon) {
-      showModal(pokemon);
-      console.log(pokemon);
-    });
-  }
+    loadDetails(pokemon)
+    }
+  
   function showModal(pokemon) {
 
     let modalTitle = document.querySelector(".modal-title");
@@ -74,10 +79,10 @@ let pokemonRepository = (function () {
     pokemonImage.src = pokemon.imageUrl;
 
     let pokemonHeight = document.querySelector('.pokemon-height');
-    pokemonHeight.innerText = 'Height : ' + (pokemon.height/10) + ' m';
-
+    pokemonHeight.innerText = 'Height : ' + (pokemon.height) + ' m';
 
   }
+  
   // THE RETURN STATEMENT HERE
   return {
     add: add,
@@ -85,6 +90,7 @@ let pokemonRepository = (function () {
     addlistItem: addlistItem,
     loadList: loadList,
     loadDetails: loadDetails,
+    showDetails:showDetails,
     showModal: showModal,
   };
 })();
