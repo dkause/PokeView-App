@@ -11,3 +11,11 @@ This is app is an exercise to learn Front End Development using HTML, CSS and Ja
 - jQuery
 - Bootstrap
 - Visual Studio Code
+- Pokemon API
+
+## Features to add
+
+- [ ] Preview Image of Pokemon in Button
+- [ ] Search for Pokemon
+- [ ] Better UX: Onboarding and Help
+- [ ] Sort Pokemons by features

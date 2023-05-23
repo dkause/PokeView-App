@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(174, 243, 15);
+  --primary-color: #fff;
   --background-color: rgb(74, 74, 74);
   --secondary-color: rgb(35, 36, 42);
   --yellow: #ffdd40;
@@ -117,9 +117,21 @@ ul.pokemon-list>button {
 
 /* Bootstrap Overrides */
 
-.modal-header, .modal-content {
+.modal-header, .modal-content, .modal-footer {
 	background-color: #1e2229;
   border: 1px solid var(--primary-color);
   text-align: center;
 }
-.modal-header {text-transform: uppercase ;}
+.modal-header {
+  text-transform: uppercase ;
+}
+.close {
+  color: var(--primary-color);
+}
+.close:hover {
+  color: red;
+  text-decoration: none;
+}
+button.close > span {
+  font-size: 2rem;
+}

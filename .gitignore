@@ -4,3 +4,8 @@ test.js
 .DS_Store
 CF-Course.code-workspace
 # Exercise 1.md
+/node_modules
+.eslintrc.json
+package-lock.json
+package.json
+/.vscode

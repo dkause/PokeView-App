@@ -1,4 +1,3 @@
-
 let pokemonRepository = (function () {
   // An empty pokemon list
   let pokemonList = [];
@@ -13,21 +12,19 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
-  
-// Add Button
+  // Add Button
   function addlistItem(pokemon) {
     let button = document.createElement("button");
-    button.innerText = pokemon.name;
-    $(button).addClass("btn btn-primary");
-    $(button).attr("type", "button");
-    $(button).attr("data-toggle", "modal");
-    $(button).attr("data-target", "#exampleModalCenter");
-
+    button.innerText =  pokemon.name;
+    button.classList.add("btn", "btn-primary");
+    button.setAttribute("type", "button");
+    button.setAttribute("data-toggle", "modal");
+    button.setAttribute("data-target", "#exampleModalCenter");
     $("#pkm-list-group").append(button);
-    $(button).click(function(event){showDetails(pokemon)});
-    
+    $(button).click(() => {
+      showDetails(pokemon);
+    });
   }
- 
 
   function loadList() {
     return fetch(apiUrl)
@@ -67,22 +64,20 @@ let pokemonRepository = (function () {
   }
 
   function showDetails(pokemon) {
-    loadDetails(pokemon)
-    }
-  
-  function showModal(pokemon) {
+    loadDetails(pokemon);
+  }
 
+  function showModal(pokemon) {
     let modalTitle = document.querySelector(".modal-title");
     modalTitle.innerText = pokemon.name;
 
-    let pokemonImage = document.querySelector('.pokemon-image');
+    let pokemonImage = document.querySelector(".pokemon-image");
     pokemonImage.src = pokemon.imageUrl;
 
-    let pokemonHeight = document.querySelector('.pokemon-height');
-    pokemonHeight.innerText = 'Height : ' + (pokemon.height) + ' m';
-
+    let pokemonHeight = document.querySelector(".pokemon-height");
+    pokemonHeight.innerText = "Height : " + pokemon.height + " m";
   }
-  
+
   // THE RETURN STATEMENT HERE
   return {
     add: add,
@@ -90,7 +85,7 @@ let pokemonRepository = (function () {
     addlistItem: addlistItem,
     loadList: loadList,
     loadDetails: loadDetails,
-    showDetails:showDetails,
+    showDetails: showDetails,
     showModal: showModal,
   };
 })();

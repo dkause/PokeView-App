@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-bs-theme="dark"lang="en" >
+<html data-bs-theme="dark" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,7 +11,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,17 +23,23 @@
     <div class="container">
       <header>
         <nav class="navbar navbar-dark">
-          <div class="navbar-brand">Pokedex show Pokespecs</div>
+          <div class="navbar-brand h2">Pokedex show Pokespecs</div>
         </nav>
       </header>
-      <main class="list-wrapper row ">
+      <main class="list-wrapper row">
         <ul
-          class="list-group list-group-horizontal pokemon-list "
+          class="list-group list-group-horizontal pokemon-list"
           id="pkm-list-group"
         ></ul>
         <!-- Modal -->
         <div
-          class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+          class="modal fade"
+          id="exampleModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="ModalCenterTitle"
+          aria-hidden="true"
+        >
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -48,9 +54,8 @@
                 </button>
               </div>
               <div class="modal-body">
-
-                <img alt="" class="pokemon-image">
-              <p class="pokemon-height"></p>
+                <img alt="" class="pokemon-image" />
+                <p class="pokemon-height"></p>
               </div>
               <div class="modal-footer">
                 <button
@@ -89,6 +94,6 @@
     ></script>
     <script src="js/polyfill.min.js"></script>
     <script src="js/fetch.umd.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
