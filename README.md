@@ -1,10 +1,13 @@
 # PokeView-App
 
-A Pokédex application that displays a list and details of Pokémon by loading data from an external API.
+## Features
+
+A Pokédex application that displays a list of Pokémons. The user can view details of the Pokémon in Modal.
+The data for the Pokémons is provided from an external API.
 
 ## Context
 
-This is app is an exercise to learn Front End Development using HTML, CSS and Javascript.
+This app is the first exercise to learn Front End Development using HTML, CSS, Javascript. And get external data from an API.
 
 ## Things used
 
