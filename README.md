@@ -17,6 +17,10 @@ This app is the first exercise to learn Front End Development using HTML, CSS, J
 - Visual Studio Code
 - Pokemon API
 
+## My Experience
+
+This is a good introduction into basic skills and tools you need to know as a developer. Not only building a Userinterface but also providing the business logic behind a basic and commom app. 
+
 ## Features to add
 
 - [ ] Preview Image of Pokemon in Button
