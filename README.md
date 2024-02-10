@@ -5,6 +5,10 @@
 A Pokédex application that displays a list of Pokémons. The user can view details of the Pokémon in Modal.
 The data for the Pokémons is provided from an external API.
 
+## Screenshot
+
+![Screenshot of PokeView APP](https://github.com/dkause/PokeView-App/blob/main/images/e1.pokemon.png)
+
 ## Context
 
 This app is the first exercise to learn Front End Development using HTML, CSS, Javascript. And get external data from an API.
@@ -20,10 +24,3 @@ This app is the first exercise to learn Front End Development using HTML, CSS, J
 ## My Experience
 
 This is a good introduction into basic skills and tools you need to know as a developer. Not only building a Userinterface but also providing the business logic behind a basic and commom app. 
-
-## Features to add
-
-- [ ] Preview Image of Pokemon in Button
-- [ ] Search for Pokemon
-- [ ] Better UX: Onboarding and Help
-- [ ] Sort Pokemons by features
