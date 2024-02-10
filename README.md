@@ -10,6 +10,7 @@ The data for the Pokémons is provided from an external API.
 This app is the first exercise to learn Front End Development using HTML, CSS, Javascript. And get external data from an API.
 
 ## Things used
+[![Tools used](https://skillicons.dev/icons?i=js,html,css,md)](https://skillicons.dev)
 
 - jQuery
 - Bootstrap
